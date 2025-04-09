@@ -1,0 +1,762 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+
+/* Phần đăng nhập */
+.container-sign-in {
+    background: linear-gradient(to bottom right, #FEAF00, #F8D442);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: #fff;
+    width: 33%;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.login-card .login-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 44px;
+    margin-bottom: 43px;
+    gap: 12.5px;
+}
+
+.login-card .title-line {
+    width: 6px;
+    height: 30px;
+    background-color: #F8D442;
+}
+
+.login-card .login-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.login-card .login-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #6C6C6C;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-card .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    margin-top: 16px;
+    margin: 0 30px;
+    margin-top: 20px;
+}
+
+.login-card .form-input {
+    width: calc(100% - 60px);
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 30px;
+    margin-top: 10px;
+}
+
+.login-card .form-input:focus {
+    border-color: #FEAF00;
+    box-shadow: 0 0 0 3px rgba(254, 175, 0, 0.2);
+}
+
+.login-card .email-input {}
+
+.login-card .password-input {}
+
+.login-card .login-button {
+    width: calc(100% - 60px);
+    margin: 0 30px;
+    margin-top: 30px;
+    height: 44px;
+    background-color: #FEAF00;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-card .forgot-password {
+    margin-top: 27px;
+    margin-bottom: 41px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.login-card .reset-password-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FEAF00;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*                                    */
+/* Phần dashboard */
+/*                                    */
+
+.container-dashBoard {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 18.75%;
+    height: 100%;
+    background-color: #F2EAE1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    gap: 12.5px;
+    margin-top: 6.666667%;
+}
+
+.sidebar .logo .logo-title-line {
+    width: 4px;
+    height: 23px;
+    background-color: #F8D442;
+    border-radius: 4px;
+}
+
+
+.sidebar .user-info {
+    margin: 20% 70px 29.7% 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.sidebar .user-info .avatar {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar .user-info .user-name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.sidebar .user-info .user-role {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #FEAF00;
+}
+
+.sidebar .nav-menu {
+    margin: 0 16%;
+}
+
+.sidebar .nav-menu .nav-item {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    cursor: pointer;
+    margin-bottom: 17px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu .nav-item a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 10px 74px 10px 41px;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-menu .nav-item a:hover {
+    background-color: #FEAF00;
+    color: white;
+}
+
+.nav-item i {
+    width: 20px;
+    text-align: center;
+}
+
+.nav-item.active a {
+    background-color: #FEAF00;
+    color: #fff;
+}
+
+.nav-item.active a:hover {
+    background-color: #FEAF00;
+    color: #fff;
+}
+
+.sidebar .logout {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.sidebar .logout .logout-button {
+    border: none;
+    height: 17px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background-color: transparent;
+}
+
+.sidebar .logout .logout-button i {
+    margin-left: 23px;
+    width: 17px;
+    cursor: pointer;
+}
+
+.container-dashBoard .right-box {
+    width: 81.25%;
+    height: 100%;
+}
+
+.right-box .top-bar {
+    display: flex;
+    justify-content: space-between;
+    height: 6.667%;
+    align-items: center;
+}
+
+.right-box .top-bar .fa-square-caret-left {
+    padding: 30px;
+    cursor: pointer;
+}
+
+.toolbar {
+    position: relative;
+}
+
+.right-box .top-bar .search-bar {
+    padding: 8px 12px;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    margin-right: 27px;
+}
+
+.right-box .top-bar .fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    right: 110px;
+    transform: translateY(-50%);
+    color: #C4C4C4;
+    cursor: pointer;
+}
+
+.right-box .top-bar .fa-bell {
+    margin-right: 51px;
+    cursor: pointer;
+}
+
+.right-box .main-content {
+    height: 93.333%;
+}
+
+.main-content .dashboard-cards {
+    margin-top: 30px;
+    justify-content: space-around;
+    display: flex;
+    gap: 30px;
+}
+
+.main-content .dashboard-cards .card {
+    width: 21.7%;
+    height: 157px;
+}
+
+.dashboard-cards .card .card-img {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.dashboard-cards .card .card-label {
+    margin-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 15px;
+}
+
+.dashboard-cards .card .card-label-user {
+    color: #fff;
+}
+
+.dashboard-cards .students-card .card-value {
+    margin-left: 70.2%;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+}
+
+.dashboard-cards .course-card .card-value {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.dashboard-cards .payments-card .card-value {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.card .card-value span {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.dashboard-cards .users-card .card-value {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
+    text-transform: uppercase;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.main-content .dashboard-cards .students-card {
+    background-color: #F0F9FF;
+}
+
+.main-content .dashboard-cards .course-card {
+    background-color: #FEF6FB;
+}
+
+.main-content .dashboard-cards .payments-card {
+    background-color: #FEFBEC;
+}
+
+.main-content .dashboard-cards .users-card {
+    background-color: #FEAF00;
+}
+
+/*                                 */
+/*                                 */
+/*           Phần students         */
+/*                                 */
+/*                                 */
+
+.students-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.students-container .students-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.students-header .students-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* .students-header .students-controls {} */
+
+.students-header .students-controls #sort-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #FEAF00;
+}
+
+.students-header .students-controls #add-student-btn {
+    background-color: #FEAF00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+.students-container .students-table-wrapper {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.students-table-wrapper .students-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.students-table-wrapper .students-table tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.students-table-wrapper .students-table th {
+    text-align: left;
+    padding: 17px;
+    background-color: #f4f4f4;
+    color: #ACACAC;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.students-table-wrapper .students-table td {
+    padding: 17px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* .students-table-wrapper .students-table thead {} */
+/* .students-table-wrapper .students-table tbody {} */
+
+.students-table .students-table-body .student-row {
+    transition: background-color 0.3s ease;
+}
+
+.students-table-body .student-row .student-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 8px;
+}
+
+.student-row .student-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-row .student-photo img {
+    width: 65px;
+    height: 55px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-left: -4px;
+}
+
+.students-table-body .student-row .student-email {
+    /*  */
+}
+
+.students-table-body .student-row .student-phone {
+    /*  */
+}
+
+.students-table-body .student-row .student-enroll {
+    font-family: monospace;
+    font-size: 13px;
+    color: #444;
+}
+
+.students-table-body .student-row .student-date {
+    /*  */
+}
+
+.students-table-body .student-row .student-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.student-row .student-actions .icon-edit {
+    cursor: pointer;
+    color: #FEAF00;
+    margin-right: 33px;
+}
+
+.student-row .student-actions .icon-delete {
+    cursor: pointer;
+    color: #FEAF00;
+    margin-right: 20px;
+}
+
+.student-row .student-actions {
+    text-align: center;
+}
+
+/*                                 */
+/*                                 */
+/* Ô nhập thông tin thêm sinh viên */
+/*                                 */
+/*                                 */
+
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.add-student-form {
+    background: #fff;
+    padding: 24px;
+    width: 50%;
+    height: 60%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-btn {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    color: red;
+    background-color: #ccc;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #FEAF00;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e69f00;
+}
+
+
+/* Sửa sinh viên */
+
+.edit-student-modal-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-student-form-content {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.edit-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-form-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.edit-close-btn {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+}
+
+.edit-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form-group label {
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.edit-form-group input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.edit-save-btn {
+    background-color: #FEAF00;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#close-edit-modal {
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    transition: background-color 0.2s ease;
+    border-radius: 5px;
+}
+
+#close-edit-modal:hover {
+    color: red;
+    background-color: #ccc;
+}

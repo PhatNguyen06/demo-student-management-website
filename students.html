@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/7b988689d5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-dashBoard">
+        <div class="sidebar">
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-title-line"></span>CRUD OPERATIONS
+            </div>
+
+            <!-- Thông tin người dùng -->
+            <div class="user-info">
+                <img src="./assets/images/Dashboard/avatar-info.png" alt="User Avatar" class="avatar">
+                <h2 class="user-name">Karthi Madesh</h2>
+                <p class="user-role">Admin</p>
+            </div>
+
+            <!-- Menu điều hướng -->
+            <nav class="nav-menu">
+                <ul>
+                    <li class="nav-item home">
+                        <a href="./home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item course">
+                        <a href="./course.html"><i class="fa-solid fa-bookmark"></i> Course</a>
+                    </li>
+                    <li class="nav-item students">
+                        <a href="./students.html"><i class="fa-solid fa-graduation-cap"></i> Students</a>
+                    </li>
+                    <li class="nav-item payments">
+                        <a href="./payments.html"><i class="fa-solid fa-dollar-sign"></i> Payment</a>
+                    </li>
+                    <li class="nav-item report">
+                        <a href="./report.html"><i class="fa-solid fa-file-invoice"></i> Report</a>
+                    </li>
+                    <li class="nav-item settings">
+                        <a href="./settings.html"><i class="fa-solid fa-sliders"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Logout -->
+            <div class="logout">
+                <button class="logout-button">Logout<i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+
+        <div class="right-box">
+            <div class="top-bar">
+                <i class="fa-solid fa-square-caret-left"></i>
+                <div class="toolbar">
+                    <input type="text" class="search-bar" placeholder="Search...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+            </div>
+
+            <div class="students-container">
+                <div class="students-header">
+                    <h2 class="students-title">Students List</h2>
+                    <div class="students-controls">
+                        <i class="fa-solid fa-sort" id="sort-toggle"></i>
+                        <button class="btn-add-student" id="add-student-btn">ADD NEW STUDENT</button>
+                    </div>
+                </div>
+
+                <!-- <hr> -->
+
+                <div class="students-table-wrapper">
+                    <table class="students-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Enroll Number</th>
+                                <th>Date of Admission</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="students-table-body">
+                            <!-- Sample row -->
+                            <!-- <tr class="student-row">
+                                <td class="student-photo"><img src="/assets/images/Dashboard/avatar-info.png" alt="Student Photo"></td>
+                                <td class="student-name">Karthi</td>
+                                <td class="student-email">karthi@gmmail.com</td>
+                                <td class="student-phone">7305477760</td>
+                                <td class="student-enroll">1234567305477760</td>
+                                <td class="student-date">08-Dec, 2021</td>
+                                <td class="student-actions">
+                                    <i class="fa-solid fa-pen icon-edit" onclick="editStudent(${index})"></i>
+                                    <i class="fa-solid fa-trash icon-delete" onclick="removeStudent(${index})"></i>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Ô nhập thông tin thêm sinh viên -->
+                <div class="modal" id="student-modal">
+                    <form class="add-student-form" id="student-form">
+                        <div class="form-header">
+                            <h3>Add New Student</h3>
+                            <i class="fa-solid fa-xmark close-btn" id="close-modal"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-name">Name</label>
+                            <input type="text" id="student-name" placeholder="Enter name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-email">Email</label>
+                            <input type="email" id="student-email" placeholder="Enter email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-phone">Phone</label>
+                            <input type="tel" id="student-phone" placeholder="Enter phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-enroll">Enroll Number</label>
+                            <input type="text" id="student-enroll" placeholder="Enter enrollment number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="student-date">Admission Date</label>
+                            <input type="date" id="student-date" required>
+                        </div>
+
+                        <button type="submit">Add Student</button>
+                    </form>
+                </div>
+
+                <div class="edit-student-modal-wrapper" id="edit-student-modal-wrapper">
+                    <form class="edit-student-form-content" id="edit-student-form">
+                        <div class="edit-form-header">
+                            <h3>Edit Student</h3>
+                            <i class="fa-solid fa-xmark" id="close-edit-modal"></i>
+                        </div>
+
+                        <div class="edit-form-group">
+                            <label for="edit-name">Name</label>
+                            <input type="text" id="edit-name" required>
+                        </div>
+
+                        <div class="edit-form-group">
+                            <label for="edit-email">Email</label>
+                            <input type="email" id="edit-email" required>
+                        </div>
+
+                        <div class="edit-form-group">
+                            <label for="edit-phone">Phone</label>
+                            <input type="tel" id="edit-phone" required>
+                        </div>
+
+                        <div class="edit-form-group">
+                            <label for="edit-enroll">Enroll Number</label>
+                            <input type="text" id="edit-enroll" required>
+                        </div>
+
+                        <div class="edit-form-group">
+                            <label for="edit-date">Admission Date</label>
+                            <input type="date" id="edit-date" required>
+                        </div>
+
+                        <button type="submit" class="edit-save-btn">Save Changes</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./js/students.js"></script>
+</body>
+
+</html>
